@@ -7,12 +7,10 @@
     <body>
 
         <?php 
-            
-            //XOR => uma expressão verdadeira e outra falsa
-           if(!(3 === 3 XOR 10 > 3)) {
-               echo 'Verdadeiro';
+           if(5 == 3 && 10 > 3) {
+            echo 'verdadeiro';
            } else {
-               echo 'Falso';
+               echo 'falso';
            }
         ?>
 
