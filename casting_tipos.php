@@ -17,8 +17,8 @@
             echo $valor2. ' ' .gettype($valor2);
             echo '</br>';
             echo "$valor2" .gettype($valor2);
+            echo '</hr>';
             echo '</br>';
-            
             $x = 13;
             $y = 10;
 
