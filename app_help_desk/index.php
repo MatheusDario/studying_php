@@ -46,6 +46,15 @@
                 <div class="text-danger">
                   Usuário ou senha inválido(s)
                 </div>
+
+                <? } ?><!-- Abre e fecha o php com o fechamento do if -->
+
+                <!-- Mensagem de erro da validação da página -->
+                <? if(isset($_GET['login']) && $_GET['login'] == 'erro2' ) { ?><!-- Encerra o php -->                  
+                
+                <div class="text-danger">
+                  Faça o login antes de acessar as páginas protegidas!
+                </div>
                 
                 <? } ?><!-- Abre e fecha o php com o fechamento do if -->
 
