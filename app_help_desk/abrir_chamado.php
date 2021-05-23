@@ -73,7 +73,7 @@
                         <!-- Mensagem de envio -->
                         <? if(isset($_GET['enviar']) == "sucesso") { ?>
                         <div class="alert alert-success" role="alert">
-                          Sucesso! <a href="home.php" class="alert-link">Voltar para o Menu</a> 
+                          Aberto com Sucesso! <a href="home.php" class="alert-link">Voltar</a> 
                         </div>
                         <? } ?><!--Encerramento da mensagem -->
                       </div>
