@@ -10,7 +10,7 @@
     $texto = $_SESSION['id'] . '#' . $titulo . '#' . $categoria . '#' . $descricao . PHP_EOL;
 
     //abertura do arquivo
-    $arquivo = fopen('arquivo.hd','a'); //função nativa do php p/ abertura
+    $arquivo = fopen('../../app_help_desk/arquivo.hd','a'); //função nativa do php p/ abertura
 
     //escrevendo o texto
     fwrite($arquivo, $texto); //função p/ escrita do arquivo

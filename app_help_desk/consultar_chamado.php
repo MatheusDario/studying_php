@@ -4,10 +4,8 @@
   //Iniciando o array de chamados vazio
   $chamados = array();
 
-  echo $_SESSION['perfil_id'];
-
   //abrir o arquivo.hd
-  $arquivo = fopen('arquivo.hd','r'); //abrindo o arquivo e efetuando apenas a leitura
+  $arquivo = fopen('../../app_help_desk/arquivo.hd','r'); //abrindo o arquivo e efetuando apenas a leitura
   
   //percorrer o arquivo enquanto houver registros 
   while(!feof($arquivo)) { //procura o fim do arquivo aonde não existir nenhum arquivo
