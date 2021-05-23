@@ -1,11 +1,13 @@
 <?php 
+    session_start();
+
     //formatando o array e tratando o '#' caso o usuário insira 
     $titulo = str_replace('#', '-', $_POST['titulo']);
     $categoria = str_replace('#', '-', $_POST['categoria']);
     $descricao = str_replace('#', '-', $_POST['descricao']);
 
     //concatenando as informações com '#' e inserindo uma quebra de linha no final 
-    $texto = $titulo . '#' . $categoria . '#' . $descricao . PHP_EOL;
+    $texto = $_SESSION['id'] . '#' . $titulo . '#' . $categoria . '#' . $descricao . PHP_EOL;
 
     //abertura do arquivo
     $arquivo = fopen('arquivo.hd','a'); //função nativa do php p/ abertura

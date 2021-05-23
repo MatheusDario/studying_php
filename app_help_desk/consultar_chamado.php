@@ -4,13 +4,26 @@
   //Iniciando o array de chamados vazio
   $chamados = array();
 
+  echo $_SESSION['perfil_id'];
+
   //abrir o arquivo.hd
   $arquivo = fopen('arquivo.hd','r'); //abrindo o arquivo e efetuando apenas a leitura
   
   //percorrer o arquivo enquanto houver registros 
   while(!feof($arquivo)) { //procura o fim do arquivo aonde não existir nenhum arquivo
-    $registro = fgets($arquivo, ); //recupera as informações
-    $chamados[] = $registro; //populando o array com as informações 
+    $registro = fgets($arquivo); //recupera as informações
+    $registro_detalhes = explode('#', $registro); // explode dos detalhes do registro para verificar o id do usuário responsável pelo cadastro
+    //verificar o perfil
+    if($_SESSION['perfil_id'] == 2) {
+      if($_SESSION['id'] != $registro_detalhes[0]) {
+        continue;
+      } else {
+        $chamados[] = $registro; //populando o array com as informações 
+      }
+    } else {
+      $chamados[] = $registro; //populando o array com as informações 
+    }
+    
   }
 
   //fechar o arquivo aberto
@@ -68,13 +81,14 @@
                   if(count($chamado_dados) < 3) {
                     continue;
                   }
+
                 ?>
                 <!--Atribui informações de maneira dinamica pelos indicies-->
                 <div class="card mb-3 bg-light">
                   <div class="card-body">
-                    <h5 class="card-title"><?=$chamado_dados[0]?></h5>
-                    <h6 class="card-subtitle mb-2 text-muted"><?=$chamado_dados[1]?></h6>
-                    <p class="card-text"><?=$chamado_dados[2]?></p>
+                    <h5 class="card-title"><?=$chamado_dados[1]?></h5>
+                    <h6 class="card-subtitle mb-2 text-muted"><?=$chamado_dados[2]?></h6>
+                    <p class="card-text"><?=$chamado_dados[3]?></p>
 
                   </div>
                 </div>
