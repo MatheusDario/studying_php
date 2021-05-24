@@ -54,7 +54,7 @@
     $y->__set('nome', 'José');
     $y->__set('telefone', '61 9999 9999');
     $y->__set('numFilhos', 2);
-    //echo $y ->resumirCadeFun();
+    echo $y ->resumirCadeFun();
     echo '<br/>';
-    echo 'O funcionário ' . $y->__get('nome') . ' possui ' . $y->__get('numFilhos') . ' filhos e o seu telefone é ' . $y->__get('telefone');
+    //echo 'O funcionário ' . $y->__get('nome') . ' possui ' . $y->__get('numFilhos') . ' filhos e o seu telefone é ' . $y->__get('telefone');
 ?>
