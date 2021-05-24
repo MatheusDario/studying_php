@@ -87,6 +87,7 @@
                     <h5 class="card-title"><?=$chamado_dados[1]?></h5>
                     <h6 class="card-subtitle mb-2 text-muted"><?=$chamado_dados[2]?></h6>
                     <p class="card-text"><?=$chamado_dados[3]?></p>
+                    <p class="card-text">O usuario <?=$chamado_dados[0]?> fez a requisição</p>
 
                   </div>
                 </div>
