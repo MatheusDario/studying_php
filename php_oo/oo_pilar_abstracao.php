@@ -10,6 +10,15 @@
         public $salario = null;
 
         //setters - Recebe determinado valor e manipula esse valor e não retorna nada
+        //getters e setters (overloading / sobrecarga)
+        function __set($atributo, $valor) {
+            $this->$atributo = $valor;
+        }
+        function __get($atributo) {
+            return $this->$atributo;
+        }
+
+        /*
         function setNome($nome) {
             $this->nome = $nome;
         }
@@ -30,7 +39,7 @@
         function getNumFilhos() {
             return $this->numFilhos;
         }
-
+        */
         //métodos
         function resumirCadeFun() {
             return "$this->nome possui $this->numFilhos e seu telefone é $this->telefone";
@@ -42,10 +51,10 @@
         }
     } 
     $y = new Funcionario(); //criando um objeto através de um modelo criado 
-    $y->setNome('José');
-    $y->setTelefone('61 9999 9999');
-    $y->setNumFilhos(2);
-    echo $y ->resumirCadeFun();
+    $y->__set('nome', 'José');
+    $y->__set('telefone', '61 9999 9999');
+    $y->__set('numFilhos', 2);
+    //echo $y ->resumirCadeFun();
     echo '<br/>';
-    echo 'O funcionário ' . $y->getNome() . ' possui ' . $y->getNumFilhos() . ' filhos e o seu telefone é ' . $y->getTelefone();
+    echo 'O funcionário ' . $y->__get('nome') . ' possui ' . $y->__get('numFilhos') . ' filhos e o seu telefone é ' . $y->__get('telefone');
 ?>
