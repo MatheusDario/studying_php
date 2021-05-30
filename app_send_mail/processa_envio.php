@@ -61,7 +61,7 @@
 
     //Recipients
     $mail->setFrom('matheus.dario@sempreceub.com', 'Curso Web Remetente');
-    $mail->addAddress('aishahmohamed2019@gmail.com', 'Mãe Destinatario');     //Add a recipient
+    $mail->addAddress($mensagem->__get('para'));     //Add a recipient
     //$mail->addReplyTo('info@example.com', 'Information');
     //$mail->addCC('cc@example.com');
     //$mail->addBCC('bcc@example.com');
@@ -72,12 +72,12 @@
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Oi.Envio teste';
-    $mail->Body    = 'Oi. Teste <strong>Testando o aplicativo de e-mail </strong>';
-    $mail->AltBody = 'Oi. Eu sou o conteudo do email';
+    $mail->Subject = $mensagem->__get('assunto');
+    $mail->Body    = $mensagem->__get('mensagem');
+    $mail->AltBody = 'É nescessário ter acesso a um client que suporte HTML para ter acesso total ao conteúdo dessa mensagem';
 
     $mail->send();
-    echo 'Message has been sent';
+    echo 'E-mail enviado com sucesso';
     } catch (Exception $e) {
         echo "Não foi possível enviar este email!. Detalhes do error: {$mail->ErrorInfo}";
     }
