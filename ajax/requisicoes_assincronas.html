@@ -11,6 +11,8 @@
         <script>
 
             function requisitarPagina(url) {
+
+                document.getElementById('conteudo').innerHTML = ''
                 
                 //incluir o giff de loading na página através do DOM
                 if(!document.getElementById('loading')){ //verifica se já existe um loading na página
@@ -34,9 +36,16 @@
                 
                 //atributo que é executado sempre quando o estado da requisição é modificado pelo servidor
                 ajax.onreadystatechange = () => {
-                    if(ajax.readyState == 4) {
-                        console.log('stage 4')
-                        document.getElementById('loading').remove()
+                    if(ajax.readyState == 4 && ajax.status == 200) {
+
+                        document.getElementById('conteudo').innerHTML = 'stage 4, requsição finalizada com sucesso'
+                        //document.getElementById('loading').remove()
+                    }
+
+                    if(ajax.readyState == 4 && ajax.status == 404) {
+
+                        document.getElementById('conteudo').innerHTML = 'stage 4, requsição finalizada, porém o recurso solicitado não foi encontrado'
+                        //document.getElementById('loading').remove()
                     }
                 }
 
