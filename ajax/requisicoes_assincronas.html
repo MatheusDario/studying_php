@@ -26,6 +26,8 @@
 
                 let ajax = new XMLHttpRequest();
 
+                console.log()
+
                 //requisição não iniciada, state = 0
                 //console.log(ajax.readyState)
 
@@ -38,7 +40,7 @@
                 ajax.onreadystatechange = () => {
                     if(ajax.readyState == 4 && ajax.status == 200) {
 
-                        document.getElementById('conteudo').innerHTML = 'stage 4, requsição finalizada com sucesso'
+                        document.getElementById('conteudo').innerHTML = ajax.responseText
                         //document.getElementById('loading').remove()
                     }
 
@@ -75,8 +77,8 @@
 	    		<div class="col-md-4 center"></div>
 	    		<div class="col-md-4 center">
 	    			<a href="#" class="btn btn-primary" onclick="requisitarPagina('pagina_1_conteudo.php')">Página 1</a>
-	    			<a href="#" class="btn btn-primary" onclick="requisitarPagina('pagina_2_conteudo.html')">Página 2</a>
-	    			<a href="#" class="btn btn-primary" onclick="requisitarPagina('pagina_3_conteudo.html')">Página 3</a>
+	    			<a href="#" class="btn btn-primary" onclick="requisitarPagina('pagina_2_conteudo.php')">Página 2</a>
+	    			<a href="#" class="btn btn-primary" onclick="requisitarPagina('pagina_3_conteudo.php')">Página 3</a>
 	    		</div>
 	    		<div class="col-md-4 center"></div>
 	    	</div>
