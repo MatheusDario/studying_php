@@ -25,4 +25,32 @@
         </elenco>
         <dataLancamento pais='Franca'>30 de agosto de 2017</dataLancamento>
     </filme>
+
+    <filme id="3">
+        <titulo>Segunda guerra</titulo>
+        <resumo>What Happened to Monday é um filme distópico de ficção científica, escrito por Max Botkin e Kerry Williamson, dirigido por Tommy Wirkola e estrelando Noomi Rapace, Glenn Close, e Willem Dafoe.</resumo>
+        <genero>Ação</genero>
+        <genero>Suspense</genero>
+        <elenco>
+            <ator>Noomi Rapace</ator>
+            <ator>GLENN CLOSE</ator>
+            <ator>WILLEM DAFOE</ator>
+        </elenco>
+        <dataLancamento pais='Franca'>30 de agosto de 2018</dataLancamento>
+    </filme>
+
+    <filme id="4">
+        <titulo>Segunda guerra 2</titulo>
+        <resumo>What Happened to Monday é um filme distópico de ficção científica, escrito por Max Botkin e Kerry Williamson, dirigido por Tommy Wirkola e estrelando Noomi Rapace, Glenn Close, e Willem Dafoe.</resumo>
+        <genero>Ação</genero>
+        <genero>Suspense</genero>
+        <elenco>
+            <ator>Noomi Rapace</ator>
+            <ator>GLENN CLOSE</ator>
+            <ator>WILLEM DAFOE</ator>
+        </elenco>
+        <dataLancamento pais='Franca'>30 de agosto de 2018</dataLancamento>
+    </filme>
+
+    
 </filmes>
